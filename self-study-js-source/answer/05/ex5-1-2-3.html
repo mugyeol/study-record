@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script>
+      const max = function (first, ...rests) {
+        let output
+        let items
+
+        if (Array.isArray(first)) {
+          output = first[0]
+          items = first
+        } else if (typeof(first) === 'number') {
+          output = first
+          items = rests
+        }
+        for (const data of items) {
+          if (output < data) {
+            output = data
+          }
+        }
+        return output
+      }
+      console.log(`max(배열): ${max([1,2,3,4])}`)
+      console.log(`max(숫자, ...): ${max(1,2,3,4)}`)
+    </script>
+  </head>
+  <body></body> 
+</html>
+ 

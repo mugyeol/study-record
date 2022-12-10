@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script>
+      class Parent {
+        test () {
+          console.log("Parent.test() 메소드")
+        }
+      }
+
+      class ChildA extends Parent {
+        test () {
+          super.test()
+          console.log("ChildA.test() 메소드")
+        }
+      }
+
+      class ChildB extends Parent {
+        test () {
+          console.log("ChildB.test() 메소드")
+          super.test()
+        }
+      }
+      new ChildA().test()
+      new ChildB().test()
+    </script>
+  </head>
+  <body></body> 
+</html>
+ 

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script>
+      console.log(3);
+      // document.addEventListener('DOMContentLoaded', () => {
+      //   const input = document.querySelector('input')
+      //   const p = document.querySelector('p')
+      //   const isEmail = (value) => {
+      //     // 골뱅이를 갖고 있고 && 골뱅이 뒤에 점이 있다면
+      //     return (value.indexOf('@') > 1)
+      //       && (value.split('@')[1].indexOf('.') > 1)
+      //   }
+
+      //   input.addEventListener('keyup', (event) => {
+      //     const value = event.currentTarget.value
+      //     // if (isEmail(value)) {
+      //       p.style.color = 'green'
+      //       p.textContent = `${value}`
+      //     // } else {
+      //       // p.style.color = 'red'
+      //       // p.textContent = `이메일 형식이 아닙니다: ${value}`
+      //     // }
+      //   })
+      // })
+      const wordsIndex = [];
+      wordsIndex.push("ㄱ", "ㄴ", "ㄷ");
+      const wordMap = new Map();
+      wordMap.set(0, "가");
+      wordMap.set(1, "나");
+      wordMap.set(2, "다");
+      const wordData = [
+        "그리고",
+        "나는",
+        "간다",
+        "포트",
+        "금요일",
+        "나비",
+        "호랑이",
+        "놀이공원",
+      ];
+      let num = -1;
+      const changeHandler = () => {
+        const a = "가"
+        const b = "나"
+        const c = ["가","나"]
+        c.sort((a,b)=>{
+          return b-a
+        })
+        console.log(c)
+        // const input = document.querySelector("input");
+        // const p = document.querySelector("p");
+        // console.log(input.value, "val");
+        // console.log(wordsIndex[0], "index");
+        // for (let i = 0; i < wordsIndex.length; i++) {
+        //   if (input.value === wordsIndex[i]) {
+        //     num = i;
+        //     break;
+        //   }
+        // }
+        // console.log("num", num);
+
+        // const arr = wordData.filter(
+        //   (word) => word >= wordMap.get(num) && word < wordMap.get(num + 1)
+        // );
+        // console.log("arr", arr);
+        // p.style.color = "green";
+        // p.textContent = `${arr.join(",")}`;
+      };
+    </script>
+  </head>
+  <body>
+    <input onkeyup="changeHandler()" type="text" />
+    <p></p>
+  </body>
+</html>
